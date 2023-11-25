@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Contact Picture Icon -->
+    <ImageView
+        android:id="@+id/ivContactPic"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/contact_img" />
+
+
+    <!-- Contact Name -->
+    <TextView
+        android:id="@+id/tvContactName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivContactPic"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tvContactPhoneNumber"
+        android:text="John Doe"/>
+
+    <!-- Contact Phone Number -->
+    <TextView
+        android:id="@+id/tvContactPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvContactName"
+        app:layout_constraintStart_toEndOf="@id/ivContactPic"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="123-456-7890"/>
+
+    <!-- Guideline for Centering -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Update Icon -->
+    <ImageView
+        android:id="@+id/ivUpdate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenter"
+        app:layout_constraintEnd_toStartOf="@id/ivDelete"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <!-- Delete Icon -->
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
